@@ -206,7 +206,7 @@ print("Strategy Drawdown",max_dd(strategy_df,"ret")*100)
 strategy_df["nifty_close"] = fetchOHLCExtended("NIFTY 50","1-07-2021","5minute")["close"]    
 strategy_df["nifty_ret"] =  strategy_df["nifty_close"].pct_change()
 strategy_df["nifty_return"] = (1+strategy_df["nifty_ret"]).cumprod()
-#nifty kpis
+#nifty KPIS
 print("Nifty Annualized Return",AGR(strategy_df,"nifty_ret")*100)
 print("Nifty sharpe ratio",sharpe(strategy_df,0.025,"nifty_ret"))
 print("Nifty Drawdown",max_dd(strategy_df,"nifty_ret")*100)   
