@@ -132,8 +132,8 @@ def train_model(df, feature_cols):
     accuracy = accuracy_score(y_test, y_pred)
     precision = precision_score(y_test, y_pred, zero_division=0)
     
-    print(f"✅ Test Accuracy: {accuracy:.2%}")
-    print(f"✅ Test Precision: {precision:.2%}")
+    print(f" Test Accuracy: {accuracy:.2%}")
+    print(f" Test Precision: {precision:.2%}")
     
     return model, accuracy, precision, X_test.index, y_test, y_pred
 
